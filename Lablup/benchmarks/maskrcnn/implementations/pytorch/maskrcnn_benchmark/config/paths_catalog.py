@@ -5,7 +5,8 @@ import os
 
 
 class DatasetCatalog(object):
-    DATA_DIR = "datasets"
+    DATA_DIR_TEMP = "../../home/work/mlperf-data/pytorch/datasets"
+    DATA_DIR = os.path.abspath(os.path.join(DATA_DIR_TEMP))
     DATASETS = {
         "coco_2017_train": {
             "img_dir": "coco/train2017",
